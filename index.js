@@ -51,6 +51,14 @@ function findEmployeeByFirstName(srcArray, firstName){
     const match = srcArray.filter(employee => employee.firstName === firstName)
     return match.length ? match[0] : 'undefined'
 }
+
+function calculatePayroll (array) {
+    let totalWages = []
+    for(let employee of array){
+        totalWages.push(allWagesFor.bind(employee)())
+    }
+    return totalWages.reduce((a, b)=> a + b)
+}
 /*
  We're giving you this function. Take a look at it, you might see some usage
  that's new and different. That's because we're avoiding a well-known, but
