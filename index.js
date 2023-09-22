@@ -1,5 +1,5 @@
 /* Your Code Here */
-const createEmployeeRecord=(array)=>{
+function createEmployeeRecord (array){
     const employee = {
         firstName: array[0],
         familyName: array[1],
@@ -11,8 +11,19 @@ const createEmployeeRecord=(array)=>{
    return employee 
 }
 
-const createEmployeeRecords=(array)=>{
+function createEmployeeRecords (array){
     return array.map(employee => createEmployeeRecord(employee))
+}
+
+function createTimeInEvent (date){
+    const timeIn = {
+        type: "TimeIn",
+        hour: parseInt(date.slice(11)),
+        date: date.slice(0, 10)
+    }
+     this.timeInEvents.push(timeIn)
+    
+    return this
 }
 
 /*
