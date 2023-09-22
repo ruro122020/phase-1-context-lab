@@ -41,6 +41,11 @@ function hoursWorkedOnDate(date){
     const totalHours = (timeOut[0].hour - timeIn[0].hour ) / 100
     return totalHours
 }
+
+function wagesEarnedOnDate (date){
+    const hoursWorked = hoursWorkedOnDate.call(this, date)
+    return hoursWorked * this.payPerHour
+}
 /*
  We're giving you this function. Take a look at it, you might see some usage
  that's new and different. That's because we're avoiding a well-known, but

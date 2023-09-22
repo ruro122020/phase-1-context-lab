@@ -163,6 +163,7 @@ describe("The payroll system", function () {
         cRecord = createEmployeeRecord(["Julius", "Caesar", "General", 27])
         createTimeInEvent.call(cRecord, "2044-03-15 0900")
         createTimeOutEvent.call(cRecord, "2044-03-15 1100")
+        console.log('crecord', cRecord)
         expect(wagesEarnedOnDate.call(cRecord, "2044-03-15")).to.equal(54)
       })
 
