@@ -46,6 +46,11 @@ function wagesEarnedOnDate (date){
     const hoursWorked = hoursWorkedOnDate.call(this, date)
     return hoursWorked * this.payPerHour
 }
+
+function findEmployeeByFirstName(srcArray, firstName){
+    const match = srcArray.filter(employee => employee.firstName === firstName)
+    return match.length ? match[0] : 'undefined'
+}
 /*
  We're giving you this function. Take a look at it, you might see some usage
  that's new and different. That's because we're avoiding a well-known, but
